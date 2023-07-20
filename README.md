@@ -1,1 +1,1 @@
-The first task of summer intership under Bharat Intern. 
+first task of summer intership under Bharat Intern. 
