@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".temperature">
+
+    <TextView
+        android:id="@+id/appNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Temperature Converter"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:elevation="4dp"
+        android:fontFamily="serif"
+        android:background="#131C49"/>
+
+    <LinearLayout
+        android:id="@+id/inputSectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appNameTextView"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:padding="40dp">
+
+  
+        <Spinner
+            android:id="@+id/temperatureTypeSpinner"
+            android:layout_width="5dp"
+            android:layout_weight="1"
+            android:layout_height="49dp"
+            android:spinnerMode="dropdown"
+            android:layout_marginRight="11dp"
+            android:layout_marginLeft="-8dp"
+
+            />
+
+        
+        <EditText
+            android:id="@+id/inputTemperatureEditText"
+            android:layout_width="1px"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter temperature"
+            android:textSize="52px" />
+    </LinearLayout>
+
+    <!-- Output Section -->
+    <LinearLayout
+        android:id="@+id/outputSectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputSectionLayout"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Celsius Output -->
+        <TextView
+            android:id="@+id/celsiusOutputTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celsius: 0"
+            android:textSize="19sp" />
+
+        <!-- Fahrenheit Output -->
+        <TextView
+            android:id="@+id/fahrenheitOutputTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit: 0"
+            android:textSize="19sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Kelvin Output -->
+        <TextView
+            android:id="@+id/kelvinOutputTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelvin: 0"
+            android:textSize="19sp"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>
